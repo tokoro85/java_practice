@@ -5,12 +5,16 @@ public class dentaku1 {
 		System.out.println("計算式を入力してください");
 
 		Scanner scanner = new Scanner(System.in);
-		String inputval = scanner.nextLine();
-		String[] inputList = inputval.split(" ");
 
-		int input1 = Integer.parseInt(inputList[0]);
-		int input2 = Integer.parseInt(inputList[2]);
-		String ope = inputList[1];
+		String[] inputVal = new String[3];
+
+		for (int i = 0; i < 3; i++) {
+			inputVal[i] = scanner.nextLine();
+		}
+
+		int input1 = Integer.parseInt(inputVal[0]);
+		int input2 = Integer.parseInt(inputVal[2]);
+		String ope = inputVal[1];
 
 		if(ope.equals("+")) {
 			int add = input1 + input2;

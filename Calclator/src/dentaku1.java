@@ -10,6 +10,7 @@ public class dentaku1 {
 
 		for (int i = 0; i < 3; i++) {
 			inputVal[i] = scanner.nextLine();
+			
 		}
 
 		int input1 = Integer.parseInt(inputVal[0]);

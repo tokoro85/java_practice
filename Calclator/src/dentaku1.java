@@ -2,20 +2,23 @@ import java.util.Scanner;
 
 public class dentaku1 {
 	public static void main(String args[]) {
-		System.out.println("計算式を入力してください");
+//		System.out.println("計算式を入力してください");
 
-		Scanner scanner = new Scanner(System.in);
+		Scanner intScanner = new Scanner(System.in);
+		Scanner strScanner = new Scanner(System.in);
 
-		String[] inputVal = new String[3];
+		int[] inputVal = new int[2];
 
-		for (int i = 0; i < 3; i++) {
-			inputVal[i] = scanner.nextLine();
-			
+		for (int i = 0; i < 2; i++) {
+			System.out.println((i+1) + "つ目の値を入力してください");
+			inputVal[i] = intScanner.nextInt();
 		}
 
-		int input1 = Integer.parseInt(inputVal[0]);
-		int input2 = Integer.parseInt(inputVal[2]);
-		String ope = inputVal[1];
+		int input1 = inputVal[0];
+		int input2 = inputVal[1];
+
+		System.out.println("演算子を入力してください");
+		String ope = strScanner.nextLine();
 
 		if(ope.equals("+")) {
 			int add = input1 + input2;
@@ -31,7 +34,8 @@ public class dentaku1 {
 			System.out.println(divi);
 		}
 
-		scanner.close();
+		intScanner.close();
+		strScanner.close();
 
 	}
 }
